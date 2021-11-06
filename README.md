@@ -19,7 +19,7 @@
 
   ## Copyright Notice
 
-  Baylee is the copyright and intellectual property of Adam "Centers" Parker. Baylee's source code ("bot") is released under the [BSD 3-Clause License license](LICENSE). This means any redistribution of this bot, in part or in whole, must retain the copyright notice found in [the license](LICENSE). Projects based on this source code cannot use the name copyrighted name of Baylee unless it is to give credit.
+  Baylee is the copyright and intellectual property of Adam "Centers" Parker. Baylee's source code ("bot") is released under the [BSD 3-Clause License license](LICENSE). This means any redistribution of this bot, in part or in whole, must retain the copyright notice found in [the license](LICENSE). Projects based on this source code cannot use the copyrighted name of Baylee unless it is to give credit.
   
   ## Trigger Warning
   
