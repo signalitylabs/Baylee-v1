@@ -1,0 +1,34 @@
+{
+  "name": "Baylee.lol",
+  "version": "0.2.8.2",
+  "description": "Baylee Bot for Discord",
+  "main": "baylee.js",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "async-limiter": "^2.0.0",
+    "bufferutil": "^4.0.1",
+    "discord.io": "^2.5.3",
+    "discord.js": "^12.3.1",
+    "ffmpeg-static": "^4.2.7",
+    "fs": "0.0.1-security",
+    "giphy-api": "^2.0.1",
+    "jimp": "^0.9.8",
+    "jpeg-js": "^0.4.2",
+    "mathjs": "^7.2.0",
+    "mysql": "^2.17.1",
+    "node-pre-gyp": "^0.13.0",
+    "prism-media": "^1.2.2",
+    "request": "^2.88.2",
+    "simple-youtube-api": "^5.2.1",
+    "sqlite": "^3.0.6",
+    "utf-8-validate": "^5.0.2",
+    "winston": "^3.3.3",
+    "ytdl-core": "^3.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Centers",
+  "license": "BSD-3-Clause"
+}
