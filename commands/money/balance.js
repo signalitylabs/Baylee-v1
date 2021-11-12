@@ -26,7 +26,7 @@ module.exports = class {
         //Send balance info
         msg.channel.send({ embed: {
             color: settings.info.color,
-            description: `<@${msg.author.id}> you have $${wallet} in your wallet and $${bank} in your bank`,
+            description: `<@${msg.author.id}> you have ᕮ${wallet} in your wallet and ᕮ${bank} in your bank`,
             footer: {
                 text: `Remember to redeem your daily and weekly rewards`
             }

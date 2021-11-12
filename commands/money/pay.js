@@ -37,9 +37,9 @@ module.exports = class {
         msg.channel.send({ embed: {
             color: settings.info.color,
             thumbnail: { url: settings.info.thumbnail },
-            description: `<@${msg.author.id}> gave <@${mention.id}> $${amount}. Their new balance is $${receiver.toLocaleString(undefined, { minimumFractionDigits: 2 })}`,
+            description: `<@${msg.author.id}> gave <@${mention.id}> ᕮ${amount}. Their new balance is ᕮ${receiver.toLocaleString(undefined, { minimumFractionDigits: 2 })}`,
             footer: {
-                text: `💸 Your new balance is $${sender.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
+                text: `💸 Your new balance is ᕮ${sender.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
             }
         }});
 

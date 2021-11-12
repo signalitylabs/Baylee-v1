@@ -62,11 +62,11 @@ module.exports = class {
         if(player_combined > server_combined) {
             //Congrats, the player won!
             var balance = await money.addWallet(msg.author.id, winnings);
-            var message = `<@${msg.author.id}> just won ${percentage}% and got $${winnings.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+            var message = `<@${msg.author.id}> just won ${percentage}% and got ᕮ${winnings.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
         } else {
             //Ha, player lost
             var balance = await money.takeWallet(msg.author.id, bet);
-            var message = `<@${msg.author.id}> just lost $${Number(bet).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+            var message = `<@${msg.author.id}> just lost ᕮ${Number(bet).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
         }
 
         message     = `**${message}**\nYou rolled a \`\`${player_combined}\`\` and the server rolled a \`\`${server_combined}\`\`\n\n${this.printDice(player_dice1, player_dice2)}`;
@@ -76,7 +76,7 @@ module.exports = class {
             thumbnail: { url: settings.info.thumbnail },
             description: `${message}`,
             footer: {
-                text: `💸 Your new balance is $${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
+                text: `💸 Your new balance is ᕮ${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
             }
         }});
 

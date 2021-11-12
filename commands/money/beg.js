@@ -42,7 +42,7 @@ module.exports = class {
             begPhrase     = begPhrase.replace(regex, word);
         }
 
-        begPhrase       = begPhrase.replace(/%amount%/ig, `$${prize}`);
+        begPhrase       = begPhrase.replace(/%amount%/ig, `ᕮ${prize}`);
         
         //Tell the member
         msg.channel.send({ embed: {
@@ -58,7 +58,7 @@ module.exports = class {
 module.exports.config = {
     info: {
         module: 'money',
-        name: '🤑 Beg for $$',
+        name: '🤑 Beg for ᕮ$',
         trigger: 'beg',
         aliases: [],
         usage: '%trigger%',

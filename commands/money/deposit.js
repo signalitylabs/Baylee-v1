@@ -26,7 +26,7 @@ module.exports = class {
         msg.channel.send({ embed: {
             color: settings.info.color,
             thumbnail: { url: settings.info.thumbnail },
-            description: `<@${msg.author.id}> deposited $${amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}. There is $${wallet.toLocaleString(undefined, { minimumFractionDigits: 2 })} in your wallet and $${bank.toLocaleString(undefined, { minimumFractionDigits: 2 })} in your bank`
+            description: `<@${msg.author.id}> deposited ᕮ${amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}. There is ᕮ${wallet.toLocaleString(undefined, { minimumFractionDigits: 2 })} in your wallet and ᕮ${bank.toLocaleString(undefined, { minimumFractionDigits: 2 })} in your bank`
         }});
 
         return true;

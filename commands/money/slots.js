@@ -20,7 +20,7 @@ module.exports = class {
         var bet     = await money.parseAmount(msg, args, 'wallet');
         if(!bet) { return false; }
 
-        var message = `**<@${msg.author.id}> just lost $${Number(bet).toLocaleString(undefined, { minimumFractionDigits: 2 })}**`;
+        var message = `**<@${msg.author.id}> just lost ᕮ${Number(bet).toLocaleString(undefined, { minimumFractionDigits: 2 })}**`;
 
         const slotsEmojis   = [':gem:', ':lemon:', ':bell:', ':peach:'];
         const slotMax       = 9;
@@ -60,7 +60,7 @@ module.exports = class {
         winnings            = winnings.toFixed(2);
         
         if(wins > 0) {
-            message = `**<@${msg.author.id}> just won ${percentage}% and got $${winnings.toLocaleString(undefined, { minimumFractionDigits: 2 })}**`;
+            message = `**<@${msg.author.id}> just won ${percentage}% and got ᕮ${winnings.toLocaleString(undefined, { minimumFractionDigits: 2 })}**`;
             var balance = await money.addWallet(msg.author.id, winnings);
         } else {
             var balance = await money.takeWallet(msg.author.id, bet);
@@ -72,7 +72,7 @@ module.exports = class {
             thumbnail: { url: settings.info.thumbnail },
             description: `${message}\n\n${slotLines[1]}▪️${slotLines[2]}▪️${slotLines[3]}\n${slotLines[4]}▪️${slotLines[5]}▪️${slotLines[6]}\n${slotLines[7]}▪️${slotLines[8]}▪️${slotLines[9]}`,
             footer: {
-                text: `💸 Your new balance is $${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
+                text: `💸 Your new balance is ᕮ${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
             }
         }});
 

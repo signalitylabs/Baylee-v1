@@ -76,7 +76,7 @@ module.exports.config = {
 
     payout: {
         amount: '1500',
-        approved: '``$1,500`` was added to your wallet. Your new balance is ``$%balance%``.',
+        approved: '``ᕮ1,500`` was added to your wallet. Your new balance is ``ᕮ%balance%``.',
         cooldown: 'Don\'t be greedy, you need to wait ``%time%`` before you can do this again'
     },
 

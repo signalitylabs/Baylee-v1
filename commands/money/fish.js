@@ -26,7 +26,7 @@ module.exports = class {
             color: settings.info.color,
             thumbnail: { url: fish.img },
             description: fish.msg.replace(`%prize%`, fish.prize),
-            footer: { text: `💸 Your new balance is $${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}` }
+            footer: { text: `💸 Your new balance is ᕮ${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}` }
         } });
 
         return true;

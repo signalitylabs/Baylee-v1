@@ -169,7 +169,7 @@ module.exports = class {
                     thumbnail: { url: settings.info.thumbnail },
                     description: `<@${msg.author.id}> ${message}`,
                     footer: {
-                        text: `💸 Your new balance is $${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
+                        text: `💸 Your new balance is ᕮ${balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`
                     }
                 } });
             });
