@@ -1,6 +1,6 @@
 'use strict'
 
-const giphy     = require('giphy-api')('GIPHY_API_KEY');
+const giphy     = require('giphy-api')(process.env.GIPHY_API);
 
 module.exports = class {
     constructor(client, db) {

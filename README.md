@@ -51,7 +51,6 @@
   3. [Create a Google developer account](https://console.developers.google.com/apis/credentials) and [generate an API key](https://developers.google.com/youtube/registering_an_application) for YouTube integration.
   4. [Create a database](https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1) and import the [database structure](structure.sql).
   5. Setup all of the environmental variables provided in the [next section](#environmental-variables).
-      - For GIFs to work, replace **GIPHY_API_KEY** with a [giphy api key](https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key) in [waifu.js](/commands/anime/waifu.js) and [gif.js](/commands/fun/gif.js)
   6. Invite the bot to your Discord server
   ```https://discord.com/oauth2/authorize?client_id={BOT-ID}&scope=bot&permissions={PERMISSIONS}&redirect_uri={REDIRECT}```
   7. Start the bot up and read her welcome message she sends on Discord.
@@ -71,6 +70,8 @@
     - If commands should be inserted into the database as they are loaded.
   * **YOUTUBE_API** ```API key```
     - For the unfinished YouTube integration.
+  * **GIPHY_API** ```API key```
+    - Used to pull GIFs off of [GIPHY](https://developers.giphy.com/).
 
   ## Database
 
