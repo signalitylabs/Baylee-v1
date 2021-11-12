@@ -1,9 +1,32 @@
 'use strict'
 
 const request  = require('request');
-const fs       = require('fs');
+const fs        = require('fs');
+const util      = require('util');
+const readdir   = util.promisify(fs.readdir);
 
 module.exports = class {
+    async cacheClear() {
+
+        //Flush the bot's cache to help keep things tidy
+        var cacheCount = 0;
+        var cacheLoader = await readdir(`./cache/`);
+
+        for(var x = 0; x < cacheLoader.length; x++) {
+            var cache  = cacheLoader[x];
+            
+            if(cache.endsWith('.json')) { 
+                cacheCount++;
+                await fs.unlink(`./cache/${cache}`, (err => {
+                    if (err) console.log(`${cacheCount}> ${err}`);
+                }));
+            }
+        }
+
+        //Tell everyone the cache was cleared
+        console.log(`${cacheCount}> Cleared cache files`);
+    }
+
     async url(url) {
         var filename = `./cache/${url.replace(/\W/g, '')}.json`;
 
@@ -40,7 +63,6 @@ module.exports = class {
         } catch(err) {
             //If the file didn't exist we need to create the cache
             if(err.code == 'ENOENT') { //ENOENT == no file
-                console.log('new cache'); //temp
                 if (!fs.existsSync(`./cache`)){
                     fs.mkdirSync(`./cache`);
                 }
@@ -55,7 +77,40 @@ module.exports = class {
         }
     }
 
-    async redditImage(subreddit) {   
+    async redditImage(msg, subreddit, settings) {
+
+        await msg.channel.send({ embeds: [{
+            author: {
+                name: `Loading...`,
+                icon_url: `https://i.imgur.com/Q7HC2MM.gif`
+            },
+            color: settings.info.color
+        }]}).then(async (post) => {
+            var image       = await this.redditPullImage(subreddit);
+    
+            post.edit({ embeds: [{
+                color: settings.info.color,
+                author: {
+                    name: image.author,
+                    url: image.author_link
+                },
+                title: image.title,
+                url: image.link,
+                image: {
+                    url: image.src
+                },
+                footer: {
+                    icon_url: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.png`,
+                    text: `Requested by ${msg.author.tag}`
+                }
+            }]});
+
+            return true;
+        });
+
+    }
+
+    async redditPullImage(subreddit) {
         //If there's no subreddit then leave
         if(!subreddit) { return; }
         //Grab the results from this subreddit
@@ -72,7 +127,7 @@ module.exports = class {
         var ext     = url.substring((url.length)-3);
 
         //If there isn't a valid file extension, re-try
-        if(!imgtype.includes(ext)) { return this.redditImage(subreddit); }
+        if(!imgtype.includes(ext)) { return this.redditPullImage(subreddit); }
 
         //If we made it this far then return the image
         return { 
