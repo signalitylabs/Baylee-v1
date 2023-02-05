@@ -30,8 +30,8 @@ __/\\\\\\\\\\\\\_________________________________/\\\\\\________________________
 
 <div align=center>
 
-[![Discord](https://img.shields.io/discord/753770820358373487.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Rps2KTm)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=bayleebot_v1&metric=ncloc)](https://sonarcloud.io/dashboard?id=bayleebot_v1)
+[![Discord](https://img.shields.io/discord/753770820358373487.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/EQnbYyYBmG)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=signalitylabs_Baylee-v1&metric=ncloc)](https://sonarcloud.io/dashboard?id=signalitylabs_Baylee-v1)
 
 </div>
 
@@ -180,8 +180,7 @@ __/\\\\\\\\\\\\\_________________________________/\\\\\\________________________
 
   #### Developer Links
 
-  * [baylee.lol](https://baylee.lol)
-  * [github.com/bayleebot](https://github.com/bayleebot)
+  * [signality.io](https://signality.io/)
+  * [github.com/signalitylabs](https://github.com/signalitylabs)
   * [github.com/thecenters](https://github.com/thecenters)
-  * [thecenters.me](https://thecenters.me)
 
